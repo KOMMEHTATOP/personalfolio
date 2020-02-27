@@ -47,7 +47,7 @@ p {
 .header {
   padding: 1rem 0 0;
   background-color: #2b7ded;
-  margin-bottom: 110px;
+  margin-bottom: 70px;
 }
 
 .header-inner {
@@ -110,6 +110,10 @@ p {
   width: 565px;
 }
 
+.content-header {
+  margin-bottom: 35px;
+}
+
 .subtitle {
   font-size: 1.4rem;
   color: #ffffff;
@@ -118,11 +122,11 @@ p {
 }
 
 .title {
+  margin-bottom: 10px;
   font-size: 2rem;
   color: #ffffff;
   font-weight: 500;
   line-height: 1.2;
-  margin-bottom: 35px;
 }
 
 .title span {
@@ -133,6 +137,11 @@ p {
   font-size: 1rem;
   color: #ffffff;
   margin-bottom: 50px;
+}
+
+.pog {
+  font-style: italic;
+  text-decoration: underline;
 }
 
 /* ----------------------------btn---------------------------- */
@@ -147,15 +156,24 @@ p {
   background-color: #1d77f5;
 
   text-decoration: none;
+  font-family: inherit;
 
   border-radius: 5px;
+  border: 0;
   padding: 1rem 2rem;
 
   transition: background 0.2s linear;
+
+  cursor: pointer;
 }
 
 .btn:hover {
   background-color: #0253c4;
+}
+
+.btn-full {
+  display: block;
+  width: 100%;
 }
 
 /* ----------------------------author---------------------------- */
@@ -164,4 +182,100 @@ p {
   right: 20px;
   bottom: 0;
   width: 400px; 
+  height: auto;
+}
+
+/* ----------------------------footer---------------------------- */
+
+.footer {
+  width: 100%;
+  position: absolute;
+  bottom: 45px;
+  left: 0;
+}
+
+/* ----------------------------contact---------------------------- */
+
+.contact {
+  display: flex;
+  align-items: center;
+}
+
+.contact-link {
+  font-size: 1rem;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-right: 2rem;
+}
+
+.contact-link:last-child {
+  margin-right: 0;
+  position: relative;
+}
+
+.contact-link:last-child::after {
+  content: "";
+  display: block;
+  margin-left: 2rem;
+  width: 80px;
+  height: 2px;
+  background-color: #fff;
+
+  position: absolute;
+  left: 100%;
+  top: 10px;
+
+  pointer-events: none; /* Убрать все взаимодействия с полоской */
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+.contacts-icons {
+  margin-right: 5px;
+}
+
+.contacts-icons:last-child {
+  margin-right: 0;
+}
+
+.link-wiki {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+/* ----------------------------input---------------------------- */
+
+.form {
+  width: 100%;
+  max-width: 280px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.input,
+textarea {
+  display: block;
+  width: 100%;
+  font-family: inherit;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, .1);
+  border: 0;
+  padding: 12px 18px;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.input::placeholder, 
+textarea::placeholder {
+  color: #fff;
+}
+
+.textarea {
+  height: 100px;
+  resize: none;
 }
