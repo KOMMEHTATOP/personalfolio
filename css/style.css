@@ -1,0 +1,167 @@
+html {
+  font-size: 15px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0 0 10px;
+}
+
+
+/* ----------------------------page---------------------------- */
+
+.page {
+  width: 100%;
+  height: 100vh; /* Еденица измерения 1 экран. Viewport Height (vh) — это процентная величина от общей высоты области просмотра. 10vh составляет 10% от текущей высоты области просмотра.
+  */
+
+  background: #000 url('../image/bg.jpg') center no-repeat;
+  background-size: cover;
+
+  position: relative;
+}
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* ----------------------------header---------------------------- */
+
+.header {
+  padding: 1rem 0 0;
+  background-color: #2b7ded;
+  margin-bottom: 110px;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-brand {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.header-logo img {
+  display: block;
+}
+
+.header-nav {
+  display: flex;
+}
+
+.img-logo {
+  width: 90px;
+  margin-bottom: 0;
+}
+
+.nav-link {
+  font-size: 1rem;
+  margin-left: 2rem;
+  color: #ffffff;
+  font-weight: 500;
+  text-decoration: none;
+
+  transition: color 0.2s linear;
+}
+
+.nav-link:hover {
+  color: red;
+}
+
+.nav-link.active {
+  position: relative;
+}
+
+.nav-link.active::after {
+  content: "";
+  background-color: #ffffff;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+}
+
+/* ----------------------------content---------------------------- */
+
+.content {
+  width: 565px;
+}
+
+.subtitle {
+  font-size: 1.4rem;
+  color: #ffffff;
+  font-weight: 300;
+  opacity: 0.6;
+}
+
+.title {
+  font-size: 2rem;
+  color: #ffffff;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 35px;
+}
+
+.title span {
+  color: #1d77f5;
+}
+
+.text {
+  font-size: 1rem;
+  color: #ffffff;
+  margin-bottom: 50px;
+}
+
+/* ----------------------------btn---------------------------- */
+
+.btn {
+  display: inline-block; 
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.1;
+
+  color: #ffffff;
+  background-color: #1d77f5;
+
+  text-decoration: none;
+
+  border-radius: 5px;
+  padding: 1rem 2rem;
+
+  transition: background 0.2s linear;
+}
+
+.btn:hover {
+  background-color: #0253c4;
+}
+
+/* ----------------------------author---------------------------- */
+.author {
+  position: absolute;
+  right: 20px;
+  bottom: 0;
+  width: 400px; 
+}
