@@ -30,16 +30,19 @@ p {
   width: 100%;
   height: 100vh; /* Еденица измерения 1 экран. Viewport Height (vh) — это процентная величина от общей высоты области просмотра. 10vh составляет 10% от текущей высоты области просмотра.
   */
-
+  min-height: 870px;
   background: #000 url('../image/bg.jpg') center no-repeat;
   background-size: cover;
 
   position: relative;
+
+  overflow: hidden;
 }
 .container {
   width: 100%;
-  max-width: 1000px;
+  max-width: 1030px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
 /* ----------------------------header---------------------------- */
@@ -107,7 +110,9 @@ p {
 /* ----------------------------content---------------------------- */
 
 .content {
-  width: 565px;
+  height: 100%;
+  width: 100%;
+  max-width: 565px;
 }
 
 .content-header {
@@ -196,7 +201,7 @@ p {
 
 /* ----------------------------contact---------------------------- */
 
-.contact {
+.contacts {
   display: flex;
   align-items: center;
 }
@@ -278,4 +283,82 @@ textarea::placeholder {
 .textarea {
   height: 100px;
   resize: none;
+}
+
+
+/* ----------------------------media---------------------------- */
+@media (max-width: 1024px) {
+
+  .author {
+    right: -80px;
+  }
+}
+
+@media (max-width: 811px) {
+  .author {
+    display: none;
+  }
+  .page {
+    min-height: 100vh;
+    height: auto;
+    padding-bottom: 2rem;
+  }
+  .content {
+    margin-bottom: 50px;
+    max-width: none;
+    text-align: center;
+  }
+
+  .form {
+    margin: 0 auto;
+  }
+  .footer {
+    position: static;
+  }
+  .contacts {
+    flex-direction: column;
+  }
+  
+  .contact-link:last-child::after {
+    display: none;
+  }
+  .contact-link {
+    margin-right: 0;
+  }
+
+}
+
+@media (max-width: 767px) {
+  
+  .header {
+    margin-bottom: 40px;
+  }
+  .header-logo {
+    display: none;
+  }
+  .header-brand {
+    font-size: 1.2rem;
+  }
+
+  
+}
+
+@media (max-width: 565px) {
+
+  .header-inner {
+    flex-direction: column;
+  }
+  .header-brand {
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 320px) {
+  .subtitle {
+    font-size: 1.2rem;
+
+  }
+  .title {
+    font-size: 1.6rem;
+  }
 }
